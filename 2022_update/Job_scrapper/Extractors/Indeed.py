@@ -49,11 +49,19 @@ def extract_indeed_jobs(keyword):
                 title = anchor['aria-label']
                 company = job.find("span", class_="companyName")
                 location = job.find("div", class_="companyLocation")
-                job_data = {
-                    'link': f"https://kr.indeed.com{link}",
-                    'company': company.string.replace(","," "),
-                    'location': location.string.replace(","," "),
-                    'position': title.replace(","," ")
-                }
+                if "," not in company.string:
+                    job_data = {
+                        'link': f"https://kr.indeed.com{link}",
+                        'company': company.string.replace(","," "),
+                        'location': location.string,
+                        'position': title.replace(","," ")
+                    }
+                else:
+                    job_data = {
+                        'link': f"https://kr.indeed.com{link}",
+                        'company': company.string.replace(","," "),
+                        'location': location.string.replace(","," "),
+                        'position': title.replace(","," ")
+                    }
                 results.append(job_data)
     return results
