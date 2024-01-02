@@ -185,3 +185,22 @@ if 10>5:
 a = 10
 if a == 10:
     print("True!") # 숫자 뿐만 아니라 문자열도 조건문 사용이 가능하다.
+
+# -- 2024.01.01 파이썬 복습 종료 -- #
+
+""" #3 Control Flow - 1. Else & Elif """
+# if문의 확장형이다. Else 와 Elif는 선행된 if문이 거짓일때의 경우를 대비한 조건문이다. 
+password_correct = False
+
+if password_correct:
+    print("Here is your money.")
+else: # 이렇게 if 문 아래 써주면 됨.
+    print("Password is incorrect:(")
+# 단 저 else는 다른 조건을 걸 수 없기 때문에 가정해야 하는 상황이 2가지 이상인경우
+# elif를 통해 2+a의 상황에서의 조건을 정해준다.
+if password_correct:
+    print("password is incorrect:(")
+elif password_correct==True:
+    print("Here is your money")
+
+""" #3 Control Flow - 2. Recap """
