@@ -204,3 +204,26 @@ elif password_correct==True:
     print("Here is your money")
 
 """ #3 Control Flow - 2. Recap """
+winner = 5
+
+if winner < 10:
+    print("Run!")
+else:
+    print("Else")
+
+# 참고로 같지 않다는 파이썬에서 "!="로 표현한다.
+if winner != 10:
+    print("that's true!")
+
+""" #3 Control Flow - 3. And&Or """
+# input이란 함수는 변수안에 들어갈 값을 사용자가 직접 입력할 수 있도록
+# 입력값을 받는 함수이다.
+Age = int(input("How old are you?"))
+if Age < 18:
+    print("You can't drink yet.")
+elif age >= 18 and age <= 35: # and은 두개 이상의 명제가 둘다 참이야 성립한다.
+    print("You can drink.")
+elif age == 60 or age == 70: # or은 두개 이상의 명제중 하나만 참이여도 참이다.
+    print("Birthday party!")
+else:
+    print("Go ahead!")
