@@ -227,3 +227,88 @@ elif age == 60 or age == 70: # or은 두개 이상의 명제중 하나만 참이
     print("Birthday party!")
 else:
     print("Go ahead!")
+# 간단하게 And 과 or의 차이를 설명
+True and True == True
+False and True == False
+True and False == False
+False and False == False
+
+True or True == True
+False or True == True
+True or False == True
+False or False == False
+
+""" #3 Control Flow - 4. Python Standard Library(파이썬 표준 라이브러리) """
+# https://docs.python.org/ko/3/library/index.html
+# 파이썬을 사용해서 카지노를 만들어보자
+# from random import randint
+
+# user_choice = int(input("Choose number."))
+# pc_choice = randint(1,50)
+
+# if user_choice == pc_choice:
+#     print("You won!")
+# elif user_choice > pc_choice:
+#     print("Lower! computer chose:",pc_choice)
+# elif user_choice < pc_choice:
+#     print("Higher! computer chose:",pc_choice)
+# 저 코드에서 pc_choice라는 함수에 들어가는 숫자를 랜덤하게 정하고 싶다면
+# random 함수를 쓰면 된다. random함수는 파이썬애 내장되어있는 내장함수다.
+# default function(내장함수)란 파이썬에 기본적으로 탑재가 되어있어
+# 파이썬을 설치만 하면 바로 쓸 수 있는 함수를 뜻한다.
+# 위 링크참고.
+    
+""" #3 Control Flow - 5. While(조건 반복문) """
+# While은 함수로써 코드가 동작을 반복하도록 만들어준다.
+# if가 조건이 성립할때 특정동작을 하고 종료된다면
+# while은 조건이 성립할때 그 동작을 반복하게 한다.
+# while True:
+#     print("hello") # hello 무한반복
+
+# distance = 0
+
+# while distance <= 20:
+#     print("I'm running: ", distance,"km")
+#     distance = distance + 1
+
+# """ #3 Control Flow - 6. Python Casino """
+# from random import randint
+
+# print("Welcome to python casino")
+# pc_choice = randint(1,100)
+
+# playing = True
+
+# while playing:
+#     user_choice = int(input("Choose number (1-100):"))
+#     if user_choice == pc_choice:
+#         print("you won!")
+#         playing = False
+#     elif user_choice > pc_choice:
+#         print("Lower!")
+#     elif user_choice < pc_choice:
+#         print("Higher!")
+
+""" #3 Control Flow - 7. Recap """
+# from random import randint -> 이 코드는 random이라는 모듈에서 randint라는 함수를 가져오기 위한 코드이다.
+# 나머지 코드는 위에 있는 6. 파이썬 카지노 파트의 코드를 다 이해하면 끝. 쓰기 귀찮음...
+
+""" #4 Data Structures(자료구조) = 0. Methods """
+# 함수와 메소드의 차이점
+'''
+우선 함수는 여러문자들이 하나의 기능을 구현하도록 구성한 것이라고 할 수 있다.
+그 함수 중에서 내부에 정의한 함수를 메소드라고 부르는 것이다. 또한 메소드는 객체의 속성을
+다루기 위한 행위를 정의한 것이라는 의미도 포함하고 있다.
+
+즉, 독립적으로 존재하는 함수이냐, *클래스 내부에 종속되어 있느냐의 구분으로 함수와 메소드를 구분할 수 있다.
+
+*클래스 : 파이썬에서의 클래스란 객체를 표현하기 위한 문법으로
+체크박스, 스크롤바 같은 특정한 개념이나 모양을 존재하는 것을 객체(object)라고 부른다.
+'''
+name = "nico"
+
+print(name.upper()) #의 upper를 메소드라 한다. 즉 독자적인 함수가 아닌 함수 안에 종속되어 다양한 기능을 수행할 수 있는 함수가 바로 메소드다.\
+# upper라는 메소드는 해당 함수안에 있는 str(문자, 영어)의 소문자롤 대문자로 바꿔준다.
+# 여러 메소드 시험
+print(name.title)
+print(name.capitalize)
